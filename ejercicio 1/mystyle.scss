@@ -1,0 +1,68 @@
+body {
+  background-color: white;
+}
+$Base-color1:red;
+$Base-color2:blue;
+$Base-color3:green;
+$i:1;
+
+@while $i <=3{
+  .container-#{$i}{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+    .box{
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      text-align: center;
+    }
+  
+  }
+  $i: $i+1;
+}
+
+@for $i from 1 through 3{
+  .container-#{$i}{
+    @if $i == 1{
+      .darken-4 {background-color: darken($Base-color1, $amount: 20); color: darken($color: white, $amount: 20);}
+      .darken-3 {background-color: darken($Base-color1, $amount: 15); color: darken($color: white, $amount: 15);}
+      .darken-2 {background-color: darken($Base-color1, $amount: 10); color: darken($color: white, $amount: 10);}
+      .darken-1 {background-color: darken($Base-color1, $amount: 5); color: darken($color: white, $amount: 5);}
+      .base-color{background-color: $Base-color1;}
+      .lighten-1{background-color: lighten($Base-color1, 5%); color: lighten($color: white, $amount: 5);}
+      .lighten-2{background-color: lighten($Base-color1, 10%); color: lighten($color: white, $amount: 10);}
+      .lighten-3{background-color: lighten($Base-color1, 15%); color: lighten($color: white, $amount: 15);}
+      .lighten-4{background-color: lighten($Base-color1, 20%); color: lighten($color: white, $amount: 20);}
+
+    }@else if $i==2{
+      .darken-4 {background-color: darken($Base-color2, $amount: 20); color: darken($color: white, $amount: 20);}
+      .darken-3 {background-color: darken($Base-color2, $amount: 15); color: darken($color: white, $amount: 15);}
+      .darken-2 {background-color: darken($Base-color2, $amount: 10); color: darken($color: white, $amount: 10);}
+      .darken-1 {background-color: darken($Base-color2, $amount: 5); color: darken($color: white, $amount: 5);}
+      .base-color{background-color: $Base-color2;}
+      .lighten-1{background-color: lighten($Base-color2, 5%); color: lighten($color: white, $amount: 5);}
+      .lighten-2{background-color: lighten($Base-color2, 10%); color: lighten($color: white, $amount: 10);}
+      .lighten-3{background-color: lighten($Base-color2, 15%); color: lighten($color: white, $amount: 15);}
+      .lighten-4{background-color: lighten($Base-color2, 20%); color: lighten($color: white, $amount: 20);}
+    }@else{
+      .darken-4 {background-color: darken($Base-color3, $amount: 20); color: darken($color: white, $amount: 20);}
+      .darken-3 {background-color: darken($Base-color3, $amount: 15); color: darken($color: white, $amount: 15);}
+      .darken-2 {background-color: darken($Base-color3, $amount: 10); color: darken($color: white, $amount: 10);}
+      .darken-1 {background-color: darken($Base-color3, $amount: 5); color: darken($color: white, $amount: 5);}
+      .base-color{background-color: $Base-color3;}
+      .lighten-1{background-color: lighten($Base-color3, 5%); color: lighten($color: white, $amount: 5);}
+      .lighten-2{background-color: lighten($Base-color3, 10%); color: lighten($color: white, $amount: 10);}
+      .lighten-3{background-color: lighten($Base-color3, 15%); color: lighten($color: white, $amount: 15);}
+      .lighten-4{background-color: lighten($Base-color3, 20%); color: lighten($color: white, $amount: 20);}
+    }
+  }
+}
+

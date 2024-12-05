@@ -1,0 +1,45 @@
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family:'Times New Roman', Times, serif;
+}
+.tarjeta{
+    
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px solid black;
+    overflow: hidden;
+
+}
+
+.imagenTarjeta{
+    width: 100%;
+}
+.contenido{
+    padding: 15px;
+}
+.fecha{
+    color:green;
+}
+
+.boton{
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+    text-align: center;
+    background-color: #41a144;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
